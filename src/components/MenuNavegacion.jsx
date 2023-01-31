@@ -31,7 +31,7 @@ const MenuNavegacion = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Catalogo
+                    Products
                   </a>
                   <ul className="dropdown-menu">
                     <li>
