@@ -1,4 +1,4 @@
-import MenuNavegacion from "./MenuNavegacion";
+import MenuNavegacion from "./components/MenuNavegacion";
 
 const Destacado = () => {
   return (
@@ -6,7 +6,6 @@ const Destacado = () => {
       <div className="main_img img1">
         <MenuNavegacion />
       </div>
-      <div className="main_img img2"></div>
     </div>
   );
 };
