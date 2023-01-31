@@ -2,7 +2,7 @@ import MenuNavegacion from "./components/MenuNavegacion";
 
 const Destacado = () => {
   return (
-    <div>
+    <div className="container-fluid">
       <div className="main_img img1">
         <MenuNavegacion />
       </div>

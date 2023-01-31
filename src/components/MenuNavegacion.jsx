@@ -11,21 +11,21 @@ const MenuNavegacion = () => {
             <div className="container-fluid">
               <Logo />
             </div>
-            <div className="col-md-6 text-end">
+            <div className="col-md-8 text-end">
               <ul className="nav">
                 <li className="nav-item">
-                  <a className="nav-link text-light " aria-current="page" href={"/"}>
+                  <a className="nav-link text-light fs-5" aria-current="page" href={"/"}>
                     Home
                   </a>
                 </li>
                 <li className="nav-item ">
-                  <a className="nav-link text-light" href={"/"}>
+                  <a className="nav-link text-light fs-5" href={"/"}>
                     History
                   </a>
                 </li>
                 <li className="nav-item dropdown">
                   <a
-                    className="nav-link dropdown-toggle text-light"
+                    className="nav-link dropdown-toggle text-light fs-5"
                     href={"/"}
                     role="button"
                     data-bs-toggle="dropdown"
@@ -35,13 +35,13 @@ const MenuNavegacion = () => {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href={"/"}>
-                        Action
+                      <a className="dropdown-item fs-5" href={"/"}>
+                        Something
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href={"/"}>
-                        Another action
+                        something
                       </a>
                     </li>
                     <li>
@@ -49,31 +49,19 @@ const MenuNavegacion = () => {
                     </li>
                     <li>
                       <a className="dropdown-item" href={"/"}>
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href={"/"}>
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href={"/"}>
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href={"/"}>
-                        Something else here
+                        Something else
                       </a>
                     </li>
                   </ul>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link text-light fs-5" aria-current="page" href={"/"}>
+                    Contact Us
+                  </a>
+                </li>
                 <form className="d-flex" role="search">
                   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button className="btn btn-outline-light" type="submit">
+                  <button className="btn btn-outline-light fs-5" type="submit">
                     Search
                   </button>
                 </form>

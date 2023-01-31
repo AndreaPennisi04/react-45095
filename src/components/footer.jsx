@@ -1,10 +1,11 @@
 import LogoFooter from "./logo/logo-serenity.png";
 import linkedin from "../imagenes/linkedin.svg";
 import github from "../imagenes/github.svg";
+import smallMoon from "./logo/logo-gold-heart.png";
 
 const Footer = () => {
   return (
-    <div className="container-fluid bg-danger-subtle">
+    <div className="container-fluid bg-danger-subtle  p-5">
       <div className="row">
         <div className="col text-md-center">
           <img src={LogoFooter} alt="Serenity" width="100vw" />
@@ -12,10 +13,10 @@ const Footer = () => {
       </div>
       <div className="row">
         <div className="col ">
-          <a href={"/https://www.linkedin.com/in/apennisi/"} className="ms-3">
+          <a href={"/https://www.linkedin.com/in/apennisi/"} className="ms-3 ">
             <img src={linkedin} alt={"linkedin"} width={"24"} />
           </a>
-          <a href={"https://github.com/AndreaPennisi04"} className="ms-3">
+          <a href={"https://github.com/AndreaPennisi04"} className="ms-3 ">
             <img src={github} alt={"github"} width={"24"} />
           </a>
         </div>
@@ -23,12 +24,15 @@ const Footer = () => {
       <hr />
       <div className="container-fluid my-5">
         <div className="row">
-          <div className="col">
+          <div className="col text-">
             <p>Make your dreams come true</p>
           </div>
-        </div>
-        <div className="col text-end">
-          <p className="me-3">Make your dreams come true</p>
+          <div className="col-md-4 text-end">
+            <p>
+              <img src={smallMoon} alt="goldHeart" width={40} />
+              Andrea Pennisi - React Project
+            </p>
+          </div>
         </div>
       </div>
     </div>
