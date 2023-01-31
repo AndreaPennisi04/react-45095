@@ -1,4 +1,4 @@
-import Destacado from "./Destacado";
+import Destacado from "./components/Destacado";
 import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListcontainer";
 

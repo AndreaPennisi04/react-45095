@@ -1,11 +1,11 @@
 import LogoFooter from "./logo/logo-serenity.png";
 import linkedin from "../imagenes/linkedin.svg";
 import github from "../imagenes/github.svg";
-import smallMoon from "./logo/logo-gold-heart.png";
+import smallMoon from "./logo/bow.png";
 
 const Footer = () => {
   return (
-    <div className="container-fluid bg-danger-subtle  p-5">
+    <div className="container-fluid bg-danger-subtle p-5">
       <div className="row">
         <div className="col text-md-center">
           <img src={LogoFooter} alt="Serenity" width="100vw" />
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <div className="col-md-4 text-end">
             <p>
-              <img src={smallMoon} alt="goldHeart" width={40} />
+              <img src={smallMoon} alt="goldHeart" width={80} />
               Andrea Pennisi - React Project
             </p>
           </div>

@@ -1,4 +1,4 @@
-import MenuNavegacion from "./components/MenuNavegacion";
+import MenuNavegacion from "./MenuNavegacion";
 
 const Destacado = () => {
   return (
