@@ -4,11 +4,11 @@ import { Badge, Button } from "@mui/material";
 
 const MenuNavegacion = () => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row ">
         <div className="col">
           <nav className="navbar navbar-expand-lg ">
-            <div className="container-fluid ">
+            <div className="col-md-4 ">
               <Logo />
             </div>
             <div className="col-md-8 text-end">
