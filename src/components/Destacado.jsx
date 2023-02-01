@@ -1,10 +1,10 @@
-import MenuNavegacion from "./MenuNavegacion";
+import Header from "./Header";
 
 const Destacado = () => {
   return (
     <div className="container-fluid">
       <div className="main_img img1">
-        <MenuNavegacion />
+        <Header />
       </div>
     </div>
   );

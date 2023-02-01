@@ -2,7 +2,7 @@ import Logo from "./Logo";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge, Button } from "@mui/material";
 
-const MenuNavegacion = () => {
+const MenuNavegacionOld = () => {
   return (
     <div className="container-fluid">
       <div className="row ">
@@ -80,4 +80,4 @@ const MenuNavegacion = () => {
     </div>
   );
 };
-export default MenuNavegacion;
+export default MenuNavegacionOld;

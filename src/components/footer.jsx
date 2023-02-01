@@ -1,4 +1,4 @@
-import LogoFooter from "./logo/logo-serenity.png";
+import LogoFooter from "./logo/logo-footer.png";
 import linkedin from "../imagenes/linkedin.svg";
 import github from "../imagenes/github.svg";
 import smallMoon from "./logo/bow.png";
