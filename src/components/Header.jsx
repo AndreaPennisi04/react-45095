@@ -81,12 +81,13 @@ function Header() {
               </Button>
             ))}
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Badge badgeContent={3} color="error">
-              <ShoppingCart />
-            </Badge>
-          </Box>
+          <Button href="#ShoopingCart">
+            <Box sx={{ flexGrow: 0 }}>
+              <Badge badgeContent={3} color="error">
+                <ShoppingCart sx={{ color: "white" }} />
+              </Badge>
+            </Box>
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
