@@ -84,7 +84,7 @@ function Header() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Badge badgeContent={3} color="error">
-              <ShoppingCart sx={{ color: "white" }} />
+              <ShoppingCart />
             </Badge>
           </Box>
         </Toolbar>

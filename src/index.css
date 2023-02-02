@@ -21,6 +21,7 @@ code {
 background-image: url("./imagenes/portada2.png");
 background-repeat: no-repeat;
 background-size: cover;
-background-position: center center;
-width: 100vw;
+display:flex;
+flex-direction: column;
+width: 100%;
 }
