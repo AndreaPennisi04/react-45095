@@ -2,6 +2,7 @@ import LogoFooter from "./logo/logo-footer.png";
 import linkedin from "../imagenes/linkedin.svg";
 import github from "../imagenes/github.svg";
 import smallMoon from "./logo/bow.png";
+import Link from "@mui/material/Link";
 
 const Footer = () => {
   return (
@@ -25,7 +26,12 @@ const Footer = () => {
       <div className="container-fluid my-5">
         <div className="row">
           <div className="col text-">
-            <p>Make your dreams come true</p>
+            <p>
+              Make your dreams come true.
+              <Link href="#" color="inherit" ml={2} fontSize={20}>
+                Contact us
+              </Link>
+            </p>
           </div>
           <div className="col-md-4 text-end">
             <p>
