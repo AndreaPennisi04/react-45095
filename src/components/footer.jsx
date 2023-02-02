@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="col-md-4 text-end">
             <p>
               <img src={smallMoon} alt="goldHeart" width={80} />
-              Andrea Pennisi - Project React
+              Andrea Pennisi - React Project
             </p>
           </div>
         </div>
