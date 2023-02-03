@@ -10,8 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Logo from "./Logo";
-import { Badge } from "@mui/material";
-import ShoppingCart from "@mui/icons-material/ShoppingCart";
+import CartWidget from "./CartWidget";
 
 const pages = ["Story", "Products", "Contact us"];
 
@@ -41,7 +40,7 @@ function Header() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="primary"
             >
               <MenuIcon />
             </IconButton>
@@ -81,13 +80,7 @@ function Header() {
               </Button>
             ))}
           </Box>
-          <Button href="#ShoopingCart">
-            <Box sx={{ flexGrow: 0 }}>
-              <Badge badgeContent={3} color="error">
-                <ShoppingCart sx={{ color: "white" }} />
-              </Badge>
-            </Box>
-          </Button>
+          <CartWidget />
         </Toolbar>
       </Container>
     </AppBar>
