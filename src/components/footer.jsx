@@ -1,47 +1,51 @@
-import LogoFooter from "./logo/logo-footer.png";
-import linkedin from "../imagenes/linkedin.svg";
-import github from "../imagenes/github.svg";
+import LogoFooter from "./logo/Moon-stick.png";
 import smallMoon from "./logo/bow.png";
-import Link from "@mui/material/Link";
+import { Button, Divider, Grid, IconButton, Typography } from "@mui/material";
+import { pink } from "@mui/material/colors";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 const Footer = () => {
   return (
-    <div className="container-fluid bg-danger-subtle p-5">
-      <div className="row">
-        <div className="col text-md-center">
-          <img src={LogoFooter} alt="Serenity" width="100vw" />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col ">
-          <a href={"/https://www.linkedin.com/in/apennisi/"} className="ms-3 ">
-            <img src={linkedin} alt={"linkedin"} width={"24"} />
-          </a>
-          <a href={"https://github.com/AndreaPennisi04"} className="ms-3 ">
-            <img src={github} alt={"github"} width={"24"} />
-          </a>
-        </div>
-      </div>
-      <hr />
-      <div className="container-fluid my-5">
-        <div className="row">
-          <div className="col text-">
-            <p>
-              Make your dreams come true.
-              <Link href="#" color="inherit" ml={2} fontSize={20}>
-                Contact us
-              </Link>
-            </p>
-          </div>
-          <div className="col-md-4 text-end">
-            <p>
-              <img src={smallMoon} alt="goldHeart" width={80} />
-              Andrea Pennisi - React Project
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Grid container spacing={2} sx={{ backgroundColor: pink[100], padding: 4 }}>
+      <Grid item xs={12} sx={{ textAlign: "center" }}>
+        <img src={LogoFooter} alt="Serenity" width="70vw" />
+      </Grid>
+      <Grid item xs={12}>
+        <IconButton
+          aria-label="LinkedIn"
+          color="primary"
+          onClick={() => {
+            window.open("https://www.linkedin.com/in/apennisi/", "blank");
+          }}
+        >
+          <LinkedIn />
+        </IconButton>
+        <IconButton
+          aria-label="Github"
+          color="primary"
+          onClick={() => {
+            window.open("https://github.com/AndreaPennisi04", "blank");
+          }}
+        >
+          <GitHub />
+        </IconButton>
+      </Grid>
+      <Grid item xs={12}>
+        <Divider />
+      </Grid>
+      <Grid item xs={6} sx={{ display: "flex", alignContent: "center" }}>
+        <Typography>
+          Make your dreams come true.
+          <Button variant="text">Contact us</Button>
+        </Typography>
+      </Grid>
+      <Grid item xs={6} sx={{ display: "flex", alignContent: "center" }}>
+        <Typography>
+          <img src={smallMoon} alt="goldHeart" width={80} />
+          Andrea Pennisi - React Project
+        </Typography>
+      </Grid>
+    </Grid>
   );
 };
 
