@@ -1,0 +1,161 @@
+[
+  {
+    "id": 1,
+    "name": "Sailor Moon",
+    "description": "Background images pack of Sailor Guardian of Love and Justice",
+    "image": "images.jpeg",
+    "price": 30,
+    "stock": 5,
+    "category": "sailor moon product"
+  },
+
+  {
+    "id": 2,
+    "name": "Serena & Darien",
+    "description": "Background images pack of the couples. Usagi is written in the hiragana spelling of the Japanese word for rabbit (うさぎ, Usagi). Darien or Mamoru (衛) means to protect.",
+    "image": "serena-Darien",
+    "price": 45,
+    "stock": 5,
+    "category": "serena darien product"
+  },
+
+  {
+    "id": 3,
+    "name": "Sailor Mars",
+    "description": "BAckground images pack 'I am the Pretty Guardian Who fights for love and for passion! I am Sailor Mars! In the Name of Mars, I'll chastise you!'",
+    "image": "sailor-Mars",
+    "price": 20,
+    "stock": 3,
+    "category": "sailor Mars product"
+  },
+
+  {
+    "id": 4,
+    "name": "Sailor Mercury",
+    "description": "'I am the Pretty Guardian Who fights for Love and for Intelligence! I am Sailor Mercury! Douse yourself in water, and repent! '",
+    "image": "sailor-Moon",
+    "price": 20,
+    "stock": 3,
+    "category": "sailor Mercury product"
+  },
+
+  {
+    "id": 5,
+    "name": "Sailor Venus",
+    "description": "",
+    "image": "sailor-Venus",
+    "price": 20,
+    "stock": 3,
+    "category": "sailor Venus product"
+  },
+
+  {
+    "id": 6,
+    "name": "Sailor Jupiter",
+    "description": "'I am the Pretty Guardian who fights for Love and for Courage. I am Sailor Jupiter! I'll make you feel regret, it'll leave you numb!'",
+    "image": "sailor-Jupiter",
+    "price": 20,
+    "stock": 3,
+    "category": "sailor Jupiter product"
+  },
+
+  {
+    "id": 7,
+    "name": "Sailors Uranus, Pluto & Neptuno",
+    "description": "Outer Sailor Guardians is a group of Sailor Guardians who defend the solar system from external threat. This role contrasts the Inner Sailor Senshi, who are designated to protect Princess Serenity. The 'Outer Sailor Guardians, Outer Sailor Senshi, Outer Sailor Soldiers, Outer Senshi,' and others are all terms coined by fans and are not official titles, however.'",
+    "image": "sailor-Uranus-Pluto-Neptuno",
+    "price": 20,
+    "stock": 2,
+    "category": "outer Sailor Guardians product"
+  },
+
+  {
+    "id": 8,
+    "name": "Sailor Saturn",
+    "description": "Guardian Saturn is the guardian spirit of the Saturn Crystal and Princess Saturn. She is a Sailor Power Guardian who appears in the Dream and Stars arcs of the manga and crystal.",
+    "image": "sailor-Saturn",
+    "price": 20,
+    "stock": 1,
+    "category": "sailor Destruction product"
+  },
+
+  {
+    "id": 9,
+    "name": "Sailor Guardians",
+    "description": "The Inner Sailor Guardians were the protectors of Princess Serenity in the Silver Millennium. They are typically referred to unofficially by fans as 'Inner Senshi,'Inner Soldiers', Inner Guardians, or Inner Sailor Senshi; however, they are never addressed by this in the series; the term was only coined to distinguish them from the Outer Senshi.'",
+    "image": "sailor-guardians",
+    "price": 50,
+    "stock": 1,
+    "category": "sailor guardians product"
+  },
+
+  {
+    "id": 10,
+    "name": "Sailor Galaxy",
+    "description": "Evil and destruction Sailor, wants to just teh power of the galaxy",
+    "image": "sailor-Galaxy",
+    "price": 20,
+    "stock": 1,
+    "category": "sailor galaxy product"
+  },
+
+  {
+    "id": 11,
+    "name": "Darien 'Prince Endymion'",
+    "description": "Prince Endymion was the Prince of the Earth during the era of the Silver Millennium, and was the beloved of Princess Serenity. In the 20th century, he was reborn as Mamoru Chiba.",
+    "image": "sailor-mamoru-Chiba-Darien",
+    "price": 30,
+    "stock": 1,
+    "category": "protector of the earth"
+  },
+
+  {
+    "id": 12,
+    "name": "Luna",
+    "description": "Luna is a talking black-purple cat that advises Usagi Tsukino/Sailor Moon and the rest of the Sailor Senshi through the anime series. This is the first anime depiction of the original manga character. Her counterpart is Artemis, who assists Sailor V.",
+    "image": "luna-Astrix",
+    "price": 15,
+    "stock": 1,
+    "category": "Sailor moon cat protector"
+  },
+
+  {
+    "id": 13,
+    "name": "Sailors Starlights",
+    "description": "The 'Sailor Starlights' are a group of three Sailor Senshi who came to Earth in search of their princess, Kakyuu, after their home planet of Kinmoku was destroyed by Sailor Galaxia. They appear in the manga, 90's anime, crystal, and many Sera Myu.",
+    "image": "sailor-Starlihts",
+    "price": 20,
+    "stock": 1,
+    "category": "Sailor Starlights product"
+  },
+
+  {
+    "id": 14,
+    "name": "Merchandansing",
+    "description": "All merchandansing categories of Sailor Moon Maga",
+    "image": "merchandansing",
+    "price": 100,
+    "stock": 1,
+    "category": "sailor moon merchandansing "
+  },
+
+  {
+    "id": 15,
+    "name": "Sailor Moon Notebook/ Books",
+    "description": "",
+    "image": "",
+    "price": 10,
+    "stock": 1,
+    "category": "notebook"
+  },
+
+  {
+    "id": 16,
+    "name": "Sailor Moon Dool",
+    "description": "GREAT GIFT IDEA: Purchase this figural bank for your personal collection or gift it to the Sailor Moon fan in your life!",
+    "image": "sailor-Moon",
+    "price": 1,
+    "stock": 1,
+    "category": "sailor moon dool product"
+  }
+]

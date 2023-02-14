@@ -1,5 +1,5 @@
 import { Badge } from "@mui/material";
-import Cart from "../imagenes/cart-shopping-solid.svg";
+import Cart from "../assets/cart-shopping-solid.svg";
 // import { useState } from "react";
 // import ".tyle.css";
 
