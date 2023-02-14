@@ -4,7 +4,7 @@ import { getImagePath } from "../util/getImagePath";
 export default function Item({ item }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 140 }} src={getImagePath(item.image)} title="green iguana" />
+      <CardMedia sx={{ height: 140 }} image={getImagePath(item.image)} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.name}

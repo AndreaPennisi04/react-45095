@@ -2,7 +2,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } f
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import ItemCount from "./ItemCount";
-import arrayProducts from "./database/products.json";
+import arrayProducts from "../json/products.json";
 import { getImagePath } from "../util/getImagePath";
 
 const ItemListContainer = ({ greeting }) => {
@@ -28,11 +28,7 @@ const ItemListContainer = ({ greeting }) => {
       </Grid>
       <Grid item md={4} sm={6} xs={12}>
         <Card sx={{ maxWidth: 345 }}>
-          <CardMedia
-            sx={{ height: 140 }}
-            image={getImagePath("merchandansing/allMoviesCollection.jpg")}
-            title="green iguana"
-          />
+          <CardMedia sx={{ height: 140 }} image={getImagePath("merchandansing/collection.jpg")} title="green iguana" />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               All movies collection
@@ -42,8 +38,8 @@ const ItemListContainer = ({ greeting }) => {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Story</Button>
+            <Button size="small">Products</Button>
           </CardActions>
         </Card>
       </Grid>
