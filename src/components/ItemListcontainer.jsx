@@ -34,7 +34,24 @@ const ItemListContainer = ({ greeting }) => {
               All movies collection
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Here you can find a selection of the best Sailor Moon movies and also other related media
+              Here you can find a selection of the best Sailor Moon movies and also other products.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Story</Button>
+            <Button size="small">Products</Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item md={4} sm={6} xs={12}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia sx={{ height: 140 }} image={getImagePath("sailors-guardians/main.png")} title="green iguana" />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              All Sailors Stories
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Learn more about the history of each of our sailors scouts.
             </Typography>
           </CardContent>
           <CardActions>
