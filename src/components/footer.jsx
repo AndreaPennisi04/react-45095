@@ -3,13 +3,46 @@ import smallMoon from "./logo/bow.png";
 import { Button, Divider, Grid, IconButton, Typography } from "@mui/material";
 import { pink } from "@mui/material/colors";
 import { GitHub, LinkedIn } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <Grid container spacing={2} sx={{ backgroundColor: pink[100], padding: 4 }}>
       <Grid item xs={12} sx={{ textAlign: "center" }}>
         <img src={LogoFooter} alt="Serenity" width="70vw" />
       </Grid>
+      <Grid item xs={12} sx={{ textAlign: "center" }}>
+        <Button
+          onClick={() => {
+            navigate("/category/Posters");
+          }}
+        >
+          Posters
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/category/Books");
+          }}
+        >
+          Books
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/category/Merchandising");
+          }}
+        >
+          Merchandising
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/category/Dolls");
+          }}
+        >
+          Dolls
+        </Button>
+      </Grid>
+
       <Grid item xs={12}>
         <IconButton
           aria-label="LinkedIn"

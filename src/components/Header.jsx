@@ -11,11 +11,11 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Logo from "./Logo";
 import CartWidget from "./CartWidget";
-
-const pages = ["Story", "Products", "Contact us"];
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -26,13 +26,12 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" color="transparent" sx={{ backdropFilter: "blur(20px)" }}>
+    <AppBar position="static" color="transparent" sx={{ backdropFilter: "blur(20px)", backgroundColor: "#001c36" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "flex" }, height: "100px", m: "5px" }}>
             <Logo />
           </Box>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -62,11 +61,27 @@ function Header() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem
+                onClick={() => {
+                  navigate("/story");
+                }}
+              >
+                <Typography textAlign="center">Story</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  navigate("/category");
+                }}
+              >
+                <Typography textAlign="center">Products</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  navigate("/contact-us");
+                }}
+              >
+                <Typography textAlign="center">Contact us</Typography>
+              </MenuItem>
             </Menu>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, height: "50px", m: "5px" }}>
@@ -74,11 +89,30 @@ function Header() {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: "white", display: "block" }}>
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={() => {
+                navigate("/story");
+              }}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              Story
+            </Button>
+            <Button
+              onClick={() => {
+                navigate("/category");
+              }}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              Products
+            </Button>
+            <Button
+              onClick={() => {
+                navigate("/contact-us");
+              }}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              Contact us
+            </Button>
           </Box>
           <CartWidget />
         </Toolbar>

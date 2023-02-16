@@ -6,7 +6,7 @@
     "image": "sailor-Moon/main.png",
     "price": 30,
     "stock": 5,
-    "category": "sailor moon product"
+    "category": "Posters"
   },
 
   {
@@ -16,7 +16,7 @@
     "image": "serena-Darien/main.png",
     "price": 45,
     "stock": 5,
-    "category": "serena darien product"
+    "category": "Posters"
   },
 
   {
@@ -26,7 +26,7 @@
     "image": "sailor-Mars/main.png",
     "price": 20,
     "stock": 3,
-    "category": "sailor Mars product"
+    "category": "Posters"
   },
 
   {
@@ -36,7 +36,7 @@
     "image": "sailor-Mercury/main.png",
     "price": 20,
     "stock": 3,
-    "category": "sailor Mercury product"
+    "category": "Posters"
   },
 
   {
@@ -46,7 +46,7 @@
     "image": "sailor-Venus/sailorVenus2.png",
     "price": 20,
     "stock": 3,
-    "category": "sailor Venus product"
+    "category": "Posters"
   },
 
   {
@@ -56,7 +56,7 @@
     "image": "sailor-Jupiter/main.png",
     "price": 20,
     "stock": 3,
-    "category": "sailor Jupiter product"
+    "category": "Posters"
   },
 
   {
@@ -66,7 +66,7 @@
     "image": "sailors-Uranus-Pluto-Neptuno/main.png",
     "price": 20,
     "stock": 2,
-    "category": "outer Sailor Guardians product"
+    "category": "Posters"
   },
 
   {
@@ -76,7 +76,7 @@
     "image": "sailor-Saturn/saturn2.png",
     "price": 20,
     "stock": 1,
-    "category": "sailor Destruction product"
+    "category": "Posters"
   },
 
   {
@@ -86,7 +86,7 @@
     "image": "sailors-guardians/main.png",
     "price": 50,
     "stock": 1,
-    "category": "sailor guardians product"
+    "category": "Posters"
   },
 
   {
@@ -96,7 +96,7 @@
     "image": "sailor-Galaxy/main.jpeg",
     "price": 20,
     "stock": 1,
-    "category": "sailor galaxy product"
+    "category": "Posters"
   },
 
   {
@@ -106,7 +106,7 @@
     "image": "mamoru-Chiba-Darien/darien7.png",
     "price": 30,
     "stock": 1,
-    "category": "protector of the earth"
+    "category": "Posters"
   },
 
   {
@@ -116,7 +116,7 @@
     "image": "luna-Astrix/main.png",
     "price": 15,
     "stock": 1,
-    "category": "Sailor moon cat protector"
+    "category": "Posters"
   },
 
   {
@@ -126,36 +126,36 @@
     "image": "sailors-Starlights/sailorStarlights2.png",
     "price": 20,
     "stock": 1,
-    "category": "Sailor Starlights product"
+    "category": "Posters"
   },
 
   {
     "id": 14,
-    "name": "Merchandansing",
-    "description": "All merchandansing categories of Sailor Moon Maga",
+    "name": "Merchandising",
+    "description": "All merchandising categories of Sailor Moon Maga",
     "image": "merchandansing/goods01.jpg",
     "price": 100,
     "stock": 1,
-    "category": "sailor moon merchandansing "
+    "category": "Merchandising"
   },
 
   {
     "id": 15,
-    "name": "Sailor Moon Notebook/ Books",
+    "name": "Sailor Moon Books",
     "description": "",
     "image": "merchandansing/sailorsNotebook.png",
     "price": 10,
     "stock": 1,
-    "category": "notebook"
+    "category": "Books"
   },
 
   {
     "id": 16,
-    "name": "Sailor Moon Dool",
+    "name": "Sailor Moon Doll",
     "description": "GREAT GIFT IDEA: Purchase this figural bank for your personal collection or gift it to the Sailor Moon fan in your life!",
     "image": "merchandansing/sailorMoonDool.png",
     "price": 1,
     "stock": 1,
-    "category": "sailor moon dool product"
+    "category": "Dolls"
   }
 ]

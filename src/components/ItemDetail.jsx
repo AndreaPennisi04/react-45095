@@ -1,24 +1,31 @@
+import { Card, Container, Grid, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { getImagePath } from "../util/getImagePath";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ item }) => {
   return (
-    <div className="container">
-      <div className="row my-5">
-        <div className="col d-flex align-items-center justify-content-end">
-          <img src={`${process.env.PUBLIC_URL}/${Item.image}`} alt={item.name} />
-        </div>
-        <div className="col d-flex align-items-center">
-          <div>
-            <h1>{item.name}</h1>
-            <p>{item.description}</p>
-            <p>
-              <b>£{item.price}</b>
-            </p>
-            <ItemCount stock={item.stock} />
-          </div>
-        </div>
-      </div>
-    </div>
+    <Container maxWidth={"lg"} sx={{ marginTop: 10, marginBottom: 10 }}>
+      <Card elevation={20}>
+        <Grid container>
+          <Grid item container xs={6}>
+            <img src={getImagePath(item.image)} alt={item.name} />
+          </Grid>
+          <Grid item container xs={6}>
+            <Box margin={4}>
+              <Typography variant="h4">{item.name}</Typography>
+              <Typography>{item.description}</Typography>
+            </Box>
+            <Box width={"100%"} marginLeft={4}>
+              <Typography variant="h5">£{item.price}</Typography>
+            </Box>
+            <Box marginLeft={4}>
+              <ItemCount stock={item.stock} />
+            </Box>
+          </Grid>
+        </Grid>
+      </Card>
+    </Container>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import { Box } from "@mui/material";
 
 export default function ItemCount({ stock }) {
   const [items, setItems] = useState(1);
@@ -27,16 +28,15 @@ export default function ItemCount({ stock }) {
   };
 
   return (
-    <ButtonGroup variant="contained" aria-label="outlined primary button group">
-      <Button onClick={decreaseStock}>-</Button>
-
-      <ButtonGroup variant="text" aria-label="text button group">
-        <Button>{items}</Button>
+    <Box>
+      <ButtonGroup variant="contained" aria-label="outlined primary button group">
+        <Button onClick={decreaseStock}>-</Button>
+        <Button variant="outlined">{items}</Button>
+        <Button onClick={increaseStock}>+</Button>
       </ButtonGroup>
-      <Button onClick={increaseStock}>+</Button>
-      <Button variant="contained" onClick={onAdd}>
+      <Button variant="contained" onClick={onAdd} sx={{ marginLeft: 5 }}>
         Add to bag
       </Button>
-    </ButtonGroup>
+    </Box>
   );
 }

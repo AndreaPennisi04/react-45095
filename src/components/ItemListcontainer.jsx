@@ -1,64 +1,40 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, CircularProgress, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import ItemCount from "./ItemCount";
 import arrayProducts from "../json/products.json";
-import { getImagePath } from "../util/getImagePath";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const { category } = useParams();
 
   useEffect(() => {
+    setLoading(true);
     const promise = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(arrayProducts);
+        resolve(arrayProducts.filter((item) => item.category === category || !category));
       }, 2000);
     });
     promise.then((answer) => {
+      setLoading(false);
       setItems(answer);
     });
-  }, []);
+  }, [category]);
+
+  if (loading) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" height={200}>
+        <CircularProgress size={120} />
+      </Box>
+    );
+  }
 
   return (
     <Grid container sx={{ margin: 4 }}>
       <Grid item xs={12}>
         <Typography variant="h3">{greeting}</Typography>
         <ItemList items={items} />
-        <ItemCount stock={16} />
-      </Grid>
-      <Grid item md={4} sm={6} xs={12}>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia sx={{ height: 140 }} image={getImagePath("merchandansing/collection.jpg")} title="green iguana" />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              All movies collection
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Here you can find a selection of the best Sailor Moon movies and also other products.
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Story</Button>
-            <Button size="small">Products</Button>
-          </CardActions>
-        </Card>
-      </Grid>
-      <Grid item md={4} sm={6} xs={12}>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia sx={{ height: 140 }} image={getImagePath("sailors-guardians/main.png")} title="green iguana" />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              All Sailors Stories
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Learn more about the history of each of our sailors scouts.
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Story</Button>
-            <Button size="small">Products</Button>
-          </CardActions>
-        </Card>
       </Grid>
     </Grid>
   );
