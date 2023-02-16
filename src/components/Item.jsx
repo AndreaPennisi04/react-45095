@@ -1,4 +1,4 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { getImagePath } from "../util/getImagePath";
 import ItemCount from "./ItemCount";
