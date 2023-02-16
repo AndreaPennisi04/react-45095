@@ -10,7 +10,13 @@ const Footer = () => {
   return (
     <Grid container spacing={2} sx={{ backgroundColor: pink[100], padding: 4 }}>
       <Grid item xs={12} sx={{ textAlign: "center" }}>
-        <img src={LogoFooter} alt="Serenity" width="70vw" />
+        <Button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <img src={LogoFooter} alt="Serenity" width="70vw" />
+        </Button>
       </Grid>
       <Grid item xs={12} sx={{ textAlign: "center" }}>
         <Button

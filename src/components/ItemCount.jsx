@@ -22,7 +22,6 @@ export default function ItemCount({ stock }) {
   const onAdd = () => {
     if (itemStock >= items) {
       setItemStock(itemStock - items);
-      setItems(1);
       console.log("You added: " + items + " to your ShoopCart!");
     }
   };

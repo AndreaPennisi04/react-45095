@@ -42,7 +42,7 @@
   {
     "id": 5,
     "name": "Sailor Venus",
-    "description": "",
+    "description": "Guardian Venus is the guardian spirit of the Venus Crystal and Princess Venus. She is a Sailor Power Guardian who appears in the Dream arc of the manga and crystal.",
     "image": "sailor-Venus/sailorVenus2.png",
     "price": 20,
     "stock": 3,
@@ -75,7 +75,7 @@
     "description": "Guardian Saturn is the guardian spirit of the Saturn Crystal and Princess Saturn. She is a Sailor Power Guardian who appears in the Dream and Stars arcs of the manga and crystal.",
     "image": "sailor-Saturn/saturn2.png",
     "price": 20,
-    "stock": 1,
+    "stock": 2,
     "category": "Posters"
   },
 
@@ -85,7 +85,7 @@
     "description": "The Inner Sailor Guardians were the protectors of Princess Serenity in the Silver Millennium. They are typically referred to unofficially by fans as 'Inner Senshi,'Inner Soldiers', Inner Guardians, or Inner Sailor Senshi; however, they are never addressed by this in the series; the term was only coined to distinguish them from the Outer Senshi.'",
     "image": "sailors-guardians/main.png",
     "price": 50,
-    "stock": 1,
+    "stock": 2,
     "category": "Posters"
   },
 
@@ -95,7 +95,7 @@
     "description": "Evil and destruction Sailor, wants to just teh power of the galaxy",
     "image": "sailor-Galaxy/main.jpeg",
     "price": 20,
-    "stock": 1,
+    "stock": 2,
     "category": "Posters"
   },
 
@@ -105,7 +105,7 @@
     "description": "Prince Endymion was the Prince of the Earth during the era of the Silver Millennium, and was the beloved of Princess Serenity. In the 20th century, he was reborn as Mamoru Chiba.",
     "image": "mamoru-Chiba-Darien/darien7.png",
     "price": 30,
-    "stock": 1,
+    "stock": 2,
     "category": "Posters"
   },
 
@@ -115,7 +115,7 @@
     "description": "Luna is a talking black-purple cat that advises Usagi Tsukino/Sailor Moon and the rest of the Sailor Senshi through the anime series. This is the first anime depiction of the original manga character. Her counterpart is Artemis, who assists Sailor V.",
     "image": "luna-Astrix/main.png",
     "price": 15,
-    "stock": 1,
+    "stock": 2,
     "category": "Posters"
   },
 
@@ -125,7 +125,7 @@
     "description": "The 'Sailor Starlights' are a group of three Sailor Senshi who came to Earth in search of their princess, Kakyuu, after their home planet of Kinmoku was destroyed by Sailor Galaxia. They appear in the manga, 90's anime, crystal, and many Sera Myu.",
     "image": "sailors-Starlights/sailorStarlights2.png",
     "price": 20,
-    "stock": 1,
+    "stock": 2,
     "category": "Posters"
   },
 
@@ -135,7 +135,7 @@
     "description": "All merchandising categories of Sailor Moon Maga",
     "image": "merchandansing/goods01.jpg",
     "price": 100,
-    "stock": 1,
+    "stock": 2,
     "category": "Merchandising"
   },
 
@@ -145,7 +145,7 @@
     "description": "",
     "image": "merchandansing/sailorsNotebook.png",
     "price": 10,
-    "stock": 1,
+    "stock": 2,
     "category": "Books"
   },
 
@@ -155,7 +155,7 @@
     "description": "GREAT GIFT IDEA: Purchase this figural bank for your personal collection or gift it to the Sailor Moon fan in your life!",
     "image": "merchandansing/sailorMoonDool.png",
     "price": 70,
-    "stock": 1,
+    "stock": 2,
     "category": "Dolls"
   }
 ]
