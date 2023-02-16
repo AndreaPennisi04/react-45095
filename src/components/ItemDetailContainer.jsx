@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
       <Box display="flex" justifyContent="center" alignItems="center" height={200}>
         <Alert severity="warning">
           <AlertTitle>Sorry</AlertTitle>
-          This item could not be found
+          This item s not longer available.
         </Alert>
       </Box>
     );
