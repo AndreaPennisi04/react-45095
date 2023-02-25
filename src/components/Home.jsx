@@ -17,7 +17,7 @@ export const Home = () => {
           height: "100vh",
         }}
       ></div>
-      <Typography variant="h3" item xs={12} sx={{ textAlign: "center" }} marginTop={3}>
+      <Typography variant="h3" xs={12} sx={{ textAlign: "center" }} marginTop={3}>
         Sailor Moon
       </Typography>
       <Grid container sx={{ margin: 4 }} direction="row" alignItems="center" justifyContent="center">
@@ -29,7 +29,7 @@ export const Home = () => {
               title="green iguana"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5">
                 All movies collection
               </Typography>
               <Typography variant="body2" color="text.secondary">

@@ -1,12 +1,13 @@
 import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 import logoImage from "./logo/sailor-Moon-Logo1.webp";
 
 const Logo = () => {
   return (
     <Box>
-      <a href="/">
+      <Link to={"/"}>
         <img src={logoImage} alt={"Logo Principal"} title="Sailor Moon" height={"100%"} />
-      </a>
+      </Link>
     </Box>
   );
 };

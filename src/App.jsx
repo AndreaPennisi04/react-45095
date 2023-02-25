@@ -25,10 +25,10 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Header />
         <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"/category"} element={<ItemListContainer greeting={"Categories"} />} />
-          <Route path={"/category/:category"} element={<ItemListContainer greeting={"Categories"} />} />
-          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+          <Route exact path={"/"} element={<Home />} />
+          <Route exact path={"/category"} element={<ItemListContainer greeting={"Categories"} />} />
+          <Route exact path={"/category/:category"} element={<ItemListContainer greeting={"Categories"} />} />
+          <Route exact path={"/item/:id"} element={<ItemDetailContainer />} />
           <Route path={"/*"} element={<NotFound />} />
         </Routes>
         <Footer />
