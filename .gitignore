@@ -104,3 +104,4 @@ dist
 .tern-port
 
 .DS_Store
+src/components/logo/.DS_Store
