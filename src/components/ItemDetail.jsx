@@ -1,9 +1,15 @@
 import { Card, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/material";
+import { useContext } from "react";
 import { getImagePath } from "../util/getImagePath";
+import { CartContext } from "./context/CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ item }) => {
+  const { addItem } = useContext(CartContext);
+  const onAdd = (quantity) => {
+    addItem(item, quantity);
+  };
   return (
     <Container maxWidth={"lg"} sx={{ marginTop: 10, marginBottom: 10 }}>
       <Card elevation={20}>
@@ -20,7 +26,7 @@ const ItemDetail = ({ item }) => {
               <Typography variant="h5">£{item.price}</Typography>
             </Box>
             <Box marginLeft={4}>
-              <ItemCount stock={item.stock} />
+              <ItemCount stock={item.stock} onAdd={onAdd} />
             </Box>
           </Grid>
         </Grid>
