@@ -107,3 +107,5 @@ dist
 src/components/logo/.DS_Store
 
 build
+
+.firebase
