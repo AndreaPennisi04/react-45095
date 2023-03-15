@@ -23,7 +23,7 @@ export default function Item({ item }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ItemCount stock={item.stock} />
+        <ItemCount product={item} />
       </CardActions>
     </Card>
   );

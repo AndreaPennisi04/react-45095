@@ -1,8 +1,9 @@
 import { Box, CircularProgress, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import arrayProducts from "../json/products.json";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../Firebase";
 
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
@@ -11,14 +12,13 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     setLoading(true);
-    const promise = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(arrayProducts.filter((item) => item.category === category || !category));
-      }, 2000);
-    });
-    promise.then((answer) => {
+    const q = !category
+      ? collection(db, "Products")
+      : query(collection(db, "Products"), where("category", "==", category));
+
+    getDocs(q).then((snapshot) => {
       setLoading(false);
-      setItems(answer);
+      setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
   }, [category]);
 

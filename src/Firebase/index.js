@@ -1,8 +1,7 @@
-import { getFirestore } from "firebase/firestone";
+import { getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBKTO44j40TcnUVf05BrEQjkwsDfgOEUCI",
   authDomain: "sailormoonreactproject.firebaseapp.com",
   projectId: "sailormoonreactproject",
   storageBucket: "sailormoonreactproject.appspot.com",

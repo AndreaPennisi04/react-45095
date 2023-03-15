@@ -1,7 +1,8 @@
 import { Alert, AlertTitle, Box, CircularProgress } from "@mui/material";
+import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import arrayProducts from "../json/products.json";
+import { db } from "../Firebase";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -11,14 +12,9 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    const promise = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(arrayProducts.find((prod) => prod.id === Number(id)));
-      }, 2000);
-    });
-    promise.then((answer) => {
+    getDoc(doc(db, "Products", id)).then((document) => {
       setLoading(false);
-      setItem(answer);
+      setItem({ id: document.id, ...document.data() });
     });
   }, [id]);
 
@@ -35,7 +31,7 @@ const ItemDetailContainer = () => {
       <Box display="flex" justifyContent="center" alignItems="center" height={200}>
         <Alert severity="warning">
           <AlertTitle>Sorry</AlertTitle>
-          This item s not longer available.
+          This item is no longer available.
         </Alert>
       </Box>
     );

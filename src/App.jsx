@@ -8,6 +8,8 @@ import { Home } from "./components/Home";
 import { NotFound } from "./components/NotFound";
 import Header from "./components/Header";
 import CartContextProvider from "./components/context/CartContext";
+import Cart from "./components/Cart";
+import { SnackbarProvider } from "notistack";
 
 const theme = createTheme({
   palette: {
@@ -23,19 +25,22 @@ const theme = createTheme({
 const App = () => {
   return (
     <CartContextProvider>
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <Header />
-          <Routes>
-            <Route exact path={"/"} element={<Home />} />
-            <Route exact path={"/category"} element={<ItemListContainer greeting={"Categories"} />} />
-            <Route exact path={"/category/:category"} element={<ItemListContainer greeting={"Categories"} />} />
-            <Route exact path={"/item/:id"} element={<ItemDetailContainer />} />
-            <Route path={"/*"} element={<NotFound />} />
-          </Routes>
-          <Footer />
-        </ThemeProvider>
-      </BrowserRouter>
+      <SnackbarProvider>
+        <BrowserRouter>
+          <ThemeProvider theme={theme}>
+            <Header />
+            <Routes>
+              <Route exact path={"/"} element={<Home />} />
+              <Route exact path={"/category"} element={<ItemListContainer greeting={"Categories"} />} />
+              <Route exact path={"/category/:category"} element={<ItemListContainer greeting={"Categories"} />} />
+              <Route exact path={"/item/:id"} element={<ItemDetailContainer />} />
+              <Route exact path={"/cart"} element={<Cart />} />
+              <Route path={"/*"} element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </ThemeProvider>
+        </BrowserRouter>
+      </SnackbarProvider>
     </CartContextProvider>
   );
 };
