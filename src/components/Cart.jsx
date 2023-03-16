@@ -60,16 +60,20 @@ const Cart = () => {
       buyer: form,
       items: cart,
       total: cartSum(),
+      timestamp: new Date(),
     };
-
-    const newDoc = await addDoc(collection(db, "Orders"), order);
-
-    if (newDoc) {
-      clear();
-      for (const item of cart) {
-        await setDoc(doc(db, "Products", item.id), { stock: item.stock - item.quantity }, { merge: true });
+    try {
+      const newDoc = await addDoc(collection(db, "Orders"), order);
+      if (newDoc) {
+        clear();
+        for (const item of cart) {
+          await setDoc(doc(db, "Products", item.id), { stock: item.stock - item.quantity }, { merge: true });
+        }
+        enqueueSnackbar(`Your order numer is ${newDoc.id}, good luck remembering it :)`, { variant: "success" });
       }
-      enqueueSnackbar(`Your order numer is ${newDoc.id}, good luck remembering it :)`, { variant: "success" });
+    } catch (error) {
+      console.error(error);
+      enqueueSnackbar(`Something went wrong while creating the order`, { variant: "error" });
     }
   };
 
