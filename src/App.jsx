@@ -25,7 +25,7 @@ const theme = createTheme({
 const App = () => {
   return (
     <CartContextProvider>
-      <SnackbarProvider>
+      <SnackbarProvider maxSnack={6}>
         <BrowserRouter>
           <ThemeProvider theme={theme}>
             <Header />

@@ -13,6 +13,7 @@ import {
   TextField,
   Box,
   CircularProgress,
+  Grid,
 } from "@mui/material";
 import { getImagePath } from "../util/getImagePath";
 import { CartContext } from "./context/CartContext";
@@ -26,21 +27,37 @@ const Cart = () => {
   const { cart, removeItem, cartSum, clear } = useContext(CartContext);
   const { enqueueSnackbar } = useSnackbar();
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState();
+  const [form, setForm] = useState({ email: "", givenName: "", familyName: "", phoneNumber: "", comments: "" });
   const [errors, setErrors] = useState({});
 
-  const sendOrder = async () => {
-    setErrors({});
-    if (!email || email.length < 4) {
-      setErrors({ email: "Invalid email", ...errors });
-      enqueueSnackbar(`You need a valid email`, {
+  const { email, givenName, familyName, phoneNumber, comments } = form;
+
+  const validField = (fieldName, content) => {
+    if (!content || content.length < 4) {
+      setErrors((currentError) => ({ [fieldName]: `Invalid ${fieldName}`, ...currentError }));
+      enqueueSnackbar(`You need a valid ${fieldName}`, {
         variant: "error",
         anchorOrigin: { vertical: "top", horizontal: "center" },
       });
+      return false;
+    }
+    return true;
+  };
+
+  const sendOrder = async () => {
+    let hasErrors = false;
+    setErrors({});
+    for (const key in form) {
+      if (Object.hasOwnProperty.call(form, key)) {
+        const element = form[key];
+        hasErrors = !validField(key, element) || hasErrors;
+      }
+    }
+    if (hasErrors) {
       return;
     }
     const order = {
-      buyer: { email },
+      buyer: form,
       items: cart,
       total: cartSum(),
     };
@@ -78,68 +95,121 @@ const Cart = () => {
   return (
     <Container maxWidth="lg" sx={{ marginBottom: 5, marginTop: 5 }}>
       <Typography variant="h3">Checkout</Typography>
-      <Box
-        component="form"
-        sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <div>
+      <Grid container justifyContent="center">
+        <Grid item md={6} padding={5}>
           <TextField
             error={!!errors.email}
             label="email"
+            required
+            id="outlined-required"
             onChange={(event) => {
-              setEmail(event.target.value);
+              setForm({ ...form, email: event.target.value });
             }}
             helperText={errors.email}
             value={email || ""}
+            fullWidth
+            sx={{ marginBottom: 1 }}
           />
-        </div>
-      </Box>
-
-      <List sx={{ width: "100%", bgcolor: "background.paper" }}>
-        {cart.map((item) => (
-          <ListItem
-            key={item.productId}
-            alignItems="flex-start"
-            divider
-            secondaryAction={
-              <IconButton aria-label="Delete" color="primary" onClick={() => removeItem(item.productId)}>
-                <DeleteIcon />
-              </IconButton>
-            }
+          <TextField
+            required
+            error={!!errors.givenName}
+            helperText={errors.givenName}
+            id="outlined-required"
+            label="Given name"
+            value={givenName || ""}
+            fullWidth
+            sx={{ marginBottom: 1 }}
+            onChange={(event) => {
+              setForm({ ...form, givenName: event.target.value });
+            }}
+          />
+          <TextField
+            required
+            error={!!errors.familyName}
+            id="outlined-required"
+            label="Family name"
+            helperText={errors.familyName}
+            value={familyName || ""}
+            onChange={(event) => {
+              setForm({ ...form, familyName: event.target.value });
+            }}
+            fullWidth
+            sx={{ marginBottom: 1 }}
+          />
+          <TextField
+            required
+            id="outlined-required"
+            label="Phone number"
+            error={!!errors.phoneNumber}
+            helperText={errors.phoneNumber}
+            value={phoneNumber || ""}
+            onChange={(event) => {
+              setForm({ ...form, phoneNumber: event.target.value });
+            }}
+            fullWidth
+            sx={{ marginBottom: 1 }}
+          />
+          <TextField
+            required
+            id="outlined-required"
+            label="Comments"
+            error={!!errors.comments}
+            helperText={errors.comments}
+            value={comments || ""}
+            onChange={(event) => {
+              setForm({ ...form, comments: event.target.value });
+            }}
+            fullWidth
+            sx={{ marginBottom: 1 }}
+          />
+          <Button
+            onClick={async () => {
+              setLoading(true);
+              await sendOrder();
+              setLoading(false);
+            }}
+            variant="outlined"
+            fullWidth
+            sx={{ marginRight: 2 }}
           >
-            <ListItemAvatar>
-              <Avatar src={getImagePath(item.image)} sx={{ width: 56, height: 56 }} variant="square" />
-            </ListItemAvatar>
-            <ListItemText
-              primary={item.name}
-              sx={{ marginLeft: 5, marginRight: 5 }}
-              secondary={
-                <>
-                  <strong>{item.category}</strong>
-                  {` —  ${item.description}`}
-                  <br />
-                  <strong>{`Quantity ${item.quantity}  |  Unit price $ ${item.price}  |  Total $ ${cartSum(
-                    item.productId
-                  )}`}</strong>
-                </>
-              }
-            />
-          </ListItem>
-        ))}
-      </List>
-      <Button
-        onClick={async () => {
-          setLoading(true);
-          await sendOrder();
-          setLoading(false);
-        }}
-      >
-        Order now
-      </Button>
+            Order now
+          </Button>
+        </Grid>
+        <Grid item md={6} alignItems="start" justifyContent="center">
+          <List sx={{ width: "100%", bgcolor: "background.paper" }}>
+            {cart.map((item) => (
+              <ListItem
+                key={item.productId}
+                alignItems="flex-start"
+                divider
+                secondaryAction={
+                  <IconButton aria-label="Delete" color="primary" onClick={() => removeItem(item.productId)}>
+                    <DeleteIcon />
+                  </IconButton>
+                }
+              >
+                <ListItemAvatar>
+                  <Avatar src={getImagePath(item.image)} sx={{ width: 56, height: 56 }} variant="square" />
+                </ListItemAvatar>
+                <ListItemText
+                  primary={item.name}
+                  sx={{ marginLeft: 5, marginRight: 5 }}
+                  secondary={
+                    <>
+                      <strong>{item.category}</strong>
+                      {` —  ${item.description}`}
+                      <br />
+                      <strong>{`Quantity ${item.quantity}  |  Unit price $ ${item.price}  |  Total $ ${cartSum(
+                        item.productId
+                      )}`}</strong>
+                    </>
+                  }
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Grid>
+      </Grid>
     </Container>
   );
 };
