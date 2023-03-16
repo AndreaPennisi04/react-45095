@@ -69,7 +69,9 @@ const Cart = () => {
         for (const item of cart) {
           await setDoc(doc(db, "Products", item.id), { stock: item.stock - item.quantity }, { merge: true });
         }
-        enqueueSnackbar(`Your order numer is ${newDoc.id}, good luck remembering it :)`, { variant: "success" });
+        enqueueSnackbar(`Your order numer is ${newDoc.id},remembering it. Thanks for your buy:)`, {
+          variant: "success",
+        });
       }
     } catch (error) {
       console.error(error);
