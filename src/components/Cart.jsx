@@ -199,7 +199,7 @@ const Cart = () => {
                       <strong>{item.category}</strong>
                       {` —  ${item.description}`}
                       <br />
-                      <strong>{`Quantity ${item.quantity}  |  Unit price $ ${item.price}  |  Total $ ${cartSum(
+                      <strong>{`Quantity ${item.quantity}  |  Unit price $ ${item.price}  |  Sub-Total $ ${cartSum(
                         item.productId
                       )}`}</strong>
                     </>
@@ -207,6 +207,10 @@ const Cart = () => {
                 />
               </ListItem>
             ))}
+            <ListItem>
+              <strong>Total: </strong>
+              <strong>${cartSum()}</strong>
+            </ListItem>
           </List>
         </Grid>
       </Grid>
